@@ -34,7 +34,7 @@ export default {
 }
 .main {
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 230px;
   right: 0;
   bottom: 0;

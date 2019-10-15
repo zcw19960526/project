@@ -15,20 +15,20 @@
         <span slot="title">首页</span>
       </el-menu-item>
        <el-menu-item index="/member/">
-        <i class="el-icon-menu"></i>
-        <span slot="title">会员管理</span>
+        <i class="el-icon-message"></i>
+        <span slot="title">トークログ</span>
       </el-menu-item>
        <el-menu-item index="/supplier/">
-        <i class="el-icon-menu"></i>
-        <span slot="title">供应商管理</span>
+        <i class="el-icon-document"></i>
+        <span slot="title">NGワード</span>
       </el-menu-item>
        <el-menu-item index="/staff/">
-        <i class="el-icon-menu"></i>
-        <span slot="title">员工管理</span>
+        <i class="el-icon-star-on"></i>
+        <span slot="title">メンバー</span>
       </el-menu-item>
        <el-menu-item index="/goods/">
-        <i class="el-icon-menu"></i>
-        <span slot="title">商品管理</span>
+        <i class="el-icon-bell"></i>
+        <span slot="title">統計情報</span>
       </el-menu-item>
     </el-menu>
   </div>
