@@ -1,16 +1,24 @@
 <template>
   <div class="login-container">
-    <el-form :rules="rules" ref="form" :model="form" label-width="80px" class="login-form">
+    <el-form :rules="rules"
+             ref="form"
+             :model="form"
+             label-width="80px"
+             class="login-form">
       <h2 class="title">管理系统</h2>
-      <el-form-item label="账号" prop="username">
+      <el-form-item label="账号"
+                    prop="username">
         <el-input v-model="form.username"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop="password">
-        <el-input v-model="form.password" type="password"></el-input>
+      <el-form-item label="密码"
+                    prop="password">
+        <el-input v-model="form.password"
+                  type="password"></el-input>
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="submitForm('form')">登录</el-button>
+        <el-button type="primary"
+                   @click="submitForm('form')">登录</el-button>
         <el-button>忘记密码</el-button>
       </el-form-item>
     </el-form>
@@ -20,7 +28,7 @@
 <script>
 import { login, getUserInfo } from "@/api/login";
 export default {
-  data() {
+  data () {
     return {
       form: {
         username: "",
@@ -37,7 +45,7 @@ export default {
     };
   },
   methods: {
-    submitForm(form) {
+    submitForm (form) {
       this.$refs[form].validate(valid => {
         if (valid) {
           login(this.form.username, this.form.password).then(resp => {
@@ -56,8 +64,7 @@ export default {
                   this.$router.push("/");
                   console.log(resp.data);
                 }
-                //获取用户的信息
-                
+                //获取用户的信息            
               });
             } else {
               this.$message({
@@ -88,8 +95,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ccc;
-  background: url("../../assets/Daiwa.png") no-repeat top;
+  /* background-color: #ccc; */
 }
 .title {
   text-align: center;

@@ -27,7 +27,7 @@ export default {
 .navbar {
   position: absolute;
   width: 230px;
-  top: 60px;
+  top: 50px;
   left: 0px;
   bottom: 0px;
   background-color: #545c64;
