@@ -5,23 +5,26 @@ import axios from 'axios'
 //     console.log(data)
 // })
 const request = axios.create({
-    baseURL: 'http://mengxuegu.com:7300/mock/5d9acf75993a01623de5b820',
-    timeout: 5000
+  baseURL: 'http://121.199.57.243:7300/mock/5e16ca5fd012a11ecfc23c7c/example',
+  timeout: 5000
 })
 //请求拦截器
-request.interceptors.request.use(config =>{
+request.interceptors.request.use(
+  config => {
     return config
-},err =>{
+  },
+  err => {
     return Promise.reject(err)
-}
+  }
 )
 //响应拦截器
-request.interceptors.response.use(resp =>{
+request.interceptors.response.use(
+  resp => {
     return resp
-},err =>{
+  },
+  err => {
     return Promise.reject(err)
-})
-
-
+  }
+)
 
 export default request //导出自定义创建的axios对象
